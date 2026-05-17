@@ -1,4 +1,4 @@
-const input = require(readline-sync)
+const input = require("readline-sync")
 
 let nome = input.question("Seu nome: ")
 let idade = input.questionInt("Sua idade: ")
