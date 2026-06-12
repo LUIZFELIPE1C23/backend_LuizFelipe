@@ -1,4 +1,4 @@
-let celsius = 15;
+let celsius = 16;
 let fah = celsius * 1.8 + 32;
 
-console.log(fah)
+console.log(`${fah}`)
