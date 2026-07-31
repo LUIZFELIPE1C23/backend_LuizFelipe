@@ -1,0 +1,13 @@
+GET http://localhost:3000/alunos
+Content-Type:application/json
+
+{
+    "id": 3,
+    "nome": "Luiz",
+    "nota": 7.0
+}
+
+###
+
+
+    
