@@ -1,0 +1,45 @@
+### teste 1 - POST sem nome (espera 400)
+ POST http://localhost:3000/alunos
+ Content-Type: application/json
+
+ { "nota": 8 }
+
+### teste 2 - POST sem nota (espera 400)
+    POST http://localhost:3000/alunos
+    Content-Type: application/json
+
+    { "nome": "João" }
+
+### teste 3 POST com nota inválida(espera 400)
+    POST http://localhost:3000/alunos
+    Content-Type: application/json
+
+    { "nome": "João", "nota": 11 }
+
+### teste 4 POST corretos(espera 201)
+    POST http://localhost:3000/alunos
+    Content-Type: application/json
+
+    { "nome": "João", "nota": 8 }
+
+### teste 5 buscar id inexistente (espera 404)
+    GET http://localhost:3000/alunos/999   
+
+### teste 6 - POST com múltiplos erros (espera 400 com array `erros`)
+    POST http://localhost:3000/alunos
+    Content-Type: application/json
+
+    { "nome": "", "nota": "abc" }
+
+### teste 7 - PUT com múltiplos erros (espera 400 com array `erros`)
+    PUT http://localhost:3000/alunos/1
+    Content-Type: application/json
+
+    { "nome": "", "nota": 15 }
+
+### teste 8 - PUT válido (espera 200)
+    PUT http://localhost:3000/alunos/1
+    Content-Type: application/json
+
+    { "nome": "Ana Atualizada", "nota": 9 }
+
